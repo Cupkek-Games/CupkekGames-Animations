@@ -1,0 +1,17 @@
+{
+  "name": "com.cupkekgames.animations",
+  "displayName": "CupkekGames Animations",
+  "version": "0.1.0",
+  "author": {
+    "name": "CupkekGames",
+    "url": "https://www.docs.cupkek.games"
+  },
+  "unity": "6000.0",
+  "documentationUrl": "https://docs.cupkek.games/",
+  "description": "Animation engine interfaces (locomotion, combat, time control). Pluralized to avoid UnityEngine.Animation collision.",
+  "keywords": [
+    "Animations",
+    "CupkekGames"
+  ],
+  "dependencies": {}
+}
