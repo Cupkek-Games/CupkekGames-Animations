@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
@@ -23,6 +24,16 @@ namespace CupkekGames.Animations
         /// Useful for one-shot animations not authored in the controller's catalog (e.g. emotes, gathering).
         /// </summary>
         void PlayClipWithReturnToIdle(AnimationClip clip, float fadeDuration = 0.25f, CancellationToken? cancellationToken = null);
+
+        /// <summary>The kinds this controller can play (its catalog, shared and its own).</summary>
+        IReadOnlyCollection<string> Kinds { get; }
+
+        /// <summary>
+        /// The clip <paramref name="kind"/> plays on this controller (to time
+        /// something by it, or to tell which variant a character uses); false
+        /// when it has no such kind.
+        /// </summary>
+        bool TryGetClip(string kind, out AnimationClip clip);
 
         /// <summary>Transform of the controlled character — for SFX/VFX positioning, hit effects, etc.</summary>
         Transform Transform { get; }
