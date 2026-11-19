@@ -22,8 +22,9 @@ namespace CupkekGames.Animations
         /// <summary>
         /// Play a raw clip and return to the <see cref="AnimationKinds.Idle"/> kind on completion.
         /// Useful for one-shot animations not authored in the controller's catalog (e.g. emotes, gathering).
+        /// <paramref name="speed"/> plays it faster (above 1) or slower: a quick gather plays its whole clip in its beat.
         /// </summary>
-        void PlayClipWithReturnToIdle(AnimationClip clip, float fadeDuration = 0.25f, CancellationToken? cancellationToken = null);
+        void PlayClipWithReturnToIdle(AnimationClip clip, float fadeDuration = 0.25f, CancellationToken? cancellationToken = null, float speed = 1f);
 
         /// <summary>The kinds this controller can play (its catalog, shared and its own).</summary>
         IReadOnlyCollection<string> Kinds { get; }
